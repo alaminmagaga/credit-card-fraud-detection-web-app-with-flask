@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+  <link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+  <script src="{{ url_for('static', filename='tailwind.css') }}"></script>
+ <style type="text/css">
+    
+ 
+  </style>
+</head>
+
+<body>
+
+
+
+<section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 my-10">
+  <h2 class="text-3xl font-semibold text-gray-700 capitalize dark:text-white text-center">Fraud Detection in Car Insurance</h2>
+  
+
+    <form  action="{{ url_for('predict')}}" method="POST">
+      <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+
+        <div>
+          <label class="text-gray-700 dark:text-gray-200" >Months as Customer</label>
+          <input name="months_as_customer" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+      </div>
+
+      <div>
+        <label class="text-gray-700 dark:text-gray-200" >Age</label>
+        <input name="age" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+    </div>
+
+    
+        <div>
+              <label class="text-gray-700 dark:text-gray-200" >Policy csl</label>
+            <select name="policy_csl" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option value="250/500">10/100</option>
+      <option value="100/300">5/100</option>
+      <option value="500/1000">2/100</option>
+            </select>
+
+          </div>
+
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >Policy Deductable</label>
+            <input name="policy_deductable" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        </div>
+
+        <div>
+          <label class="text-gray-700 dark:text-gray-200" >Policy Annual Premium</label>
+          <input name="policy_annual_premium" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+      </div>
+
+      <div>
+        <label class="text-gray-700 dark:text-gray-200" >Umbrella Limit</label>
+        <input name="umbrella_limit" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+    </div>
+
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >Insured Sex</label>
+          <select name="insured_sex" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="female">female</option>
+            <option value="male">male</option>
+          </select>
+
+        </div>
+
+
+
+
+        <div>
+          <label class="text-gray-700 dark:text-gray-200" >Insured Education Level</label>
+        <select name="insured_education_level" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="JD">JD</option>
+          <option value="High School">High School</option>
+          <option value="Associate">Associate</option>
+          <option value="MD">MD</option>
+          <option value="PhD">PhD</option>
+          <option value="College">College</option>
+
+        </select>
+      </div>
+
+
+
+      
+          <div>
+              <label class="text-gray-700 dark:text-gray-200" >Insured Occupation</label>
+            <select name="insured_occupation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option value="prof-specialty">prof-specialty</option>
+        <option value="tech-support">tech-support</option>
+        <option value="sales">sales</option>
+        <option value="exec-managerial">exec-managerial</option>
+        <option value="craft-repair">craft-repair</option>
+        <option value="transport-moving">transport-moving</option>
+        
+        <option value="other-service">other-service</option>
+        <option value="priv-house-serv">priv-house-serv</option>
+        <option value="armed-forces">armed-forces</option>
+        <option value="adm-clerical">adm-clerical</option>
+        <option value="protective-serv">protective-serv</option>
+        <option value="handlers-cleaners">handlers-cleaners</option>
+        <option value="farming-fishing">farming-fishing</option>
+
+            </select>
+          </div>
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >Insured Relationship</label>
+          <select name="insured_relationship" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="own-child">own-child</option>
+        <option value="other-relative">other-relative</option>
+        <option value="not-in-family">not-in-family</option>
+        <option value="husband">husband</option>
+        <option value="wife">wife</option>
+        <option value="unmarried">unmarried</option>
+
+          </select>
+        </div>
+
+        <div>
+          <label class="text-gray-700 dark:text-gray-200" >Capital gains</label>
+          <input name="capital-gains" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+      </div>
+
+      <div>
+        <label class="text-gray-700 dark:text-gray-200" >Capital loss</label>
+        <input name="capital-loss" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+    </div>
+        
+
+
+    
+       
+      
+         
+  
+      </select>
+
+
+
+        <div>
+          <label class="text-gray-700 dark:text-gray-200" >Incident Type</label>
+        <select name="incident_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="Multi-vehicle Collision">Multi-vehicle Collision</option>
+      <option value="Single Vehicle Collision">Single Vehicle Collision</option>
+      <option value="Vehicle Theft">Vehicle Theft</option>
+      <option value="Parked Car">Parked Car</option>
+
+        </select>
+      </div>
+
+      <div>
+        <label class="text-gray-700 dark:text-gray-200" >Collision Type</label>
+      <select name="collision_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option value="Rear Collision">Rear Collision</option>
+        <option value="Side Collision">Side Collision</option>
+        <option value="Front Collision">Front Collision</option>
+
+      </select>
+    </div>
+
+    <div>
+      <label class="text-gray-700 dark:text-gray-200" >Incident Severity</label>
+    <select name="incident_severity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <option value="Minor Damage">Minor Damage</option>
+          <option value="Total Loss">Total Loss</option>
+          <option value="Major Damage">Major Damage</option>
+           <option value="Trivial Damage">Trivial Damage</option>
+
+    </select>
+  </div>
+
+  <div>
+    <label class="text-gray-700 dark:text-gray-200" >Incident Hour of the day</label>
+    <input name="incident_hour_of_the_day" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >Number of Vehicles Involved</label>
+  <input name="number_of_vehicles_involved" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+
+  
+        
+
+
+
+<div>
+              <label class="text-gray-700 dark:text-gray-200" >property_damage</label>
+            <select name="property_damage" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option value="No">No</option>
+  <option value="Yes">Yes</option>
+
+            </select>
+          </div>
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >bodily_injuries</label>
+          <select name="bodily_injuries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="No">No</option>
+  <option value="Yes">Yes</option>
+
+          </select>
+        </div>
+
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >Witnesses</label>
+  <input name="witnesses" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+              <label class="text-gray-700 dark:text-gray-200" >Police Report Available</label>
+            <select name="police_report_available" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option value="No">No</option>
+      <option value="Yes">Yes</option>
+
+            </select>
+          </div>     
+          
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >Total Claim Amount</label>
+            <input name="total_claim_amount" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >Injury Claim</label>
+            <input name="injury_claim" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >Property Claim</label>
+            <input name="property_claim" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+          
+          
+
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >vehicle_claim</label>
+            <input name="vehicle_claim" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >auto_year</label>
+            <input name="auto_year" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >policy_bind_year</label>
+            <input name="policy_bind_year" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >policy_bind_month</label>
+            <input name="policy_bind_month" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+          <div>
+            <label class="text-gray-700 dark:text-gray-200" >policy_bind_day</label>
+            <input name="policy_bind_day" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          </div>
+
+          
+
+          
+
+
+
+        
+
+         
+      </div>
+
+      <div class="flex justify-center mt-6">
+          <button type="submit" class="px-6 py-3 leading-5 bg-green-500 hover:bg-green-800 text-white text-lg transition-colors duration-200 transform  rounded-md  focus:outline-none focus:bg-blue-600">Predict</button>
+      </div>
+  </form>
+</section>
+
+</body>
+</html>
