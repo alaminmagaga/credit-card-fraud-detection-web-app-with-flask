@@ -7,23 +7,43 @@
 <body>
 
 
-		<div class="w3-card-4 w3-teal w3-center w3-padding-32 w3-xxlarge w3-animate-bottom">
-
-		{% if prediction[0]== 0 %}
-<h2>This Customer claim is Legit</h2>
-<button>Proceed to payment</button>
-{%else%}
-<h2>This Customer claim maybe Fraudulent</h2>
-<h3>there is need for further investigation</h3>
-
-{%endif%}
-
-</div>
-		
-	</div>
+	
 
    
+	<div class="w3-card-4 w3-teal w3-center w3-padding-32 w3-xxlarge w3-animate-bottom">Fraud Detection Result</div>
 		
+
+
+<br>
+{% if prediction[0]== 0%}
+<div class="w3-card-4 w3-opacity w3-hover-opacity-off w3-animate-top">
+  <img class="mySlides" src="{{url_for('static', filename='legit.jpg')}}" style="width:100%;height: 500px;">
+</div>
+<br>
+<div class="w3-center w3-card-4 w3-teal w3-xxlarge w3-padding-24 w3-text-black" > 
+	
+
+	<h2>This Customer claim is Legit</h2>
+	<button>Proceed to payment</button>
+	{%else%}
+	<div class="w3-card-4 w3-opacity w3-hover-opacity-off w3-animate-top">
+		<img class="mySlides" src="{{url_for('static', filename='fraud1.jpg')}}" style="width:100%;height: 500px;">
+	  </div>
+	  <br>
+	  <div class="w3-center w3-card-4 w3-teal w3-xxlarge w3-padding-24 w3-text-black" > 
+		  
+	<h2>This Customer claim maybe Fraudulent</h2>
+	<h3>there is need for further investigation</h3>
+	
+	{%endif%}</div>
+<br>
+	<div class="w3-container w3-padding w3-center">
+
+	<a href="{{ url_for('home')}}"><button class="w3-teal w3-padding" type="submit" >Back</button></a>
+
+
+
+</div>
 
 </body>
 </html>
