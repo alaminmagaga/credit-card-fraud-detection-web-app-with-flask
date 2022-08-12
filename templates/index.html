@@ -25,244 +25,166 @@
       <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
 
         <div>
-          <label class="text-gray-700 dark:text-gray-200" >Months as Customer</label>
-          <input name="months_as_customer" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+          <label class="text-gray-700 dark:text-gray-200" >Time</label>
+          <input name="time" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
       </div>
 
       <div>
-        <label class="text-gray-700 dark:text-gray-200" >Age</label>
-        <input name="age" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-    </div>
-
-    
-        <div>
-              <label class="text-gray-700 dark:text-gray-200" >Policy csl</label>
-            <select name="policy_csl" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option value="250/500">10/100</option>
-      <option value="100/300">5/100</option>
-      <option value="500/1000">2/100</option>
-            </select>
-
-          </div>
-
-
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Policy Deductable</label>
-            <input name="policy_deductable" required  type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-        </div>
-
-        <div>
-          <label class="text-gray-700 dark:text-gray-200" >Policy Annual Premium</label>
-          <input name="policy_annual_premium" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-      </div>
-
-      <div>
-        <label class="text-gray-700 dark:text-gray-200" >Umbrella Limit</label>
-        <input name="umbrella_limit" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-    </div>
-
-
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Insured Sex</label>
-          <select name="insured_sex" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="female">female</option>
-            <option value="male">male</option>
-          </select>
-
-        </div>
-
-
-
-
-        <div>
-          <label class="text-gray-700 dark:text-gray-200" >Insured Education Level</label>
-        <select name="insured_education_level" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option value="JD">JD</option>
-          <option value="High School">High School</option>
-          <option value="Associate">Associate</option>
-          <option value="MD">MD</option>
-          <option value="PhD">PhD</option>
-          <option value="College">College</option>
-
-        </select>
-      </div>
-
-
-
-      
-          <div>
-              <label class="text-gray-700 dark:text-gray-200" >Insured Occupation</label>
-            <select name="insured_occupation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option value="prof-specialty">prof-specialty</option>
-        <option value="tech-support">tech-support</option>
-        <option value="sales">sales</option>
-        <option value="exec-managerial">exec-managerial</option>
-        <option value="craft-repair">craft-repair</option>
-        <option value="transport-moving">transport-moving</option>
-        
-        <option value="other-service">other-service</option>
-        <option value="priv-house-serv">priv-house-serv</option>
-        <option value="armed-forces">armed-forces</option>
-        <option value="adm-clerical">adm-clerical</option>
-        <option value="protective-serv">protective-serv</option>
-        <option value="handlers-cleaners">handlers-cleaners</option>
-        <option value="farming-fishing">farming-fishing</option>
-
-            </select>
-          </div>
-
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Insured Relationship</label>
-          <select name="insured_relationship" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="own-child">own-child</option>
-        <option value="other-relative">other-relative</option>
-        <option value="not-in-family">not-in-family</option>
-        <option value="husband">husband</option>
-        <option value="wife">wife</option>
-        <option value="unmarried">unmarried</option>
-
-          </select>
-        </div>
-
-        <div>
-          <label class="text-gray-700 dark:text-gray-200" >Capital gains</label>
-          <input name="capital-gains" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-      </div>
-
-      <div>
-        <label class="text-gray-700 dark:text-gray-200" >Capital loss</label>
-        <input name="capital-loss"required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-    </div>
-        
-
-
-    
-       
-      
-         
-  
-      </select>
-
-
-
-        <div>
-          <label class="text-gray-700 dark:text-gray-200" >Incident Type</label>
-        <select name="incident_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option value="Multi-vehicle Collision">Multi-vehicle Collision</option>
-      <option value="Single Vehicle Collision">Single Vehicle Collision</option>
-      <option value="Vehicle Theft">Vehicle Theft</option>
-      <option value="Parked Car">Parked Car</option>
-
-        </select>
-      </div>
-
-      <div>
-        <label class="text-gray-700 dark:text-gray-200" >Collision Type</label>
-      <select name="collision_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option value="Rear Collision">Rear Collision</option>
-        <option value="Side Collision">Side Collision</option>
-        <option value="Front Collision">Front Collision</option>
-
-      </select>
+        <label class="text-gray-700 dark:text-gray-200" >V1</label>
+        <input name="v1" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
     </div>
 
     <div>
-      <label class="text-gray-700 dark:text-gray-200" >Incident Severity</label>
-    <select name="incident_severity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <option value="Minor Damage">Minor Damage</option>
-          <option value="Total Loss">Total Loss</option>
-          <option value="Major Damage">Major Damage</option>
-           <option value="Trivial Damage">Trivial Damage</option>
-
-    </select>
+      <label class="text-gray-700 dark:text-gray-200" >V2</label>
+      <input name="v2" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
   </div>
 
   <div>
-    <label class="text-gray-700 dark:text-gray-200" >Incident Hour of the day</label>
-    <input name="incident_hour_of_the_day" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+    <label class="text-gray-700 dark:text-gray-200" >V2</label>
+    <input name="v2" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
 </div>
 
 <div>
-  <label class="text-gray-700 dark:text-gray-200" >Number of Vehicles Involved</label>
-  <input name="number_of_vehicles_involved" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+  <label class="text-gray-700 dark:text-gray-200" >V3</label>
+  <input name="v3" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
 </div>
 
 
-  
-        
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >V4</label>
+  <input name="v4" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
 
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >V5</label>
+  <input name="v5" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >V6</label>
+  <input name="v6" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V7</label>
+<input name="v7" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V8</label>
+<input name="v8" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V9</label>
+<input name="v9" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
 
 
 <div>
-              <label class="text-gray-700 dark:text-gray-200" >Property Damage</label>
-            <select name="property_damage" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option value="No">No</option>
-  <option value="Yes">Yes</option>
+<label class="text-gray-700 dark:text-gray-200" >V10</label>
+<input name="v10" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
 
-            </select>
-          </div>
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V11</label>
+<input name="v11" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
 
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Bodily Injuries</label>
-          <select name="bodily_injuries" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="No">No</option>
-  <option value="Yes">Yes</option>
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >V12</label>
+  <input name="v12" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
 
-          </select>
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V13</label>
+<input name="v13" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V14</label>
+<input name="v14" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V15</label>
+<input name="v15" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V16</label>
+<input name="v16" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V17</label>
+<input name="v17" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >V18</label>
+  <input name="v18" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V19</label>
+<input name="v19" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V20</label>
+<input name="v20" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V21</label>
+<input name="v21" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+
+<div>
+<label class="text-gray-700 dark:text-gray-200" >V22</label>
+<input name="v22" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+</div>
+
+<div>
+  <label class="text-gray-700 dark:text-gray-200" >V23</label>
+  <input name="v23" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+  </div>
+
+  <div>
+    <label class="text-gray-700 dark:text-gray-200" >V24</label>
+    <input name="v24" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+    </div>
+
+    <div>
+      <label class="text-gray-700 dark:text-gray-200" >V25</label>
+      <input name="v25" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+      </div>
+
+      <div>
+        <label class="text-gray-700 dark:text-gray-200" >V26</label>
+        <input name="v26" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
         </div>
 
-<div>
-  <label class="text-gray-700 dark:text-gray-200" >Witnesses</label>
-  <input name="witnesses" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-</div>
-
-<div>
-              <label class="text-gray-700 dark:text-gray-200" >Police Report Available</label>
-            <select name="police_report_available" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option value="No">No</option>
-      <option value="Yes">Yes</option>
-
-            </select>
-          </div>     
-          
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Total Claim Amount</label>
-            <input name="total_claim_amount" required type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+        <div>
+          <label class="text-gray-700 dark:text-gray-200" >V27</label>
+          <input name="v27" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
           </div>
 
           <div>
-            <label class="text-gray-700 dark:text-gray-200" >Injury Claim</label>
-            <input name="injury_claim" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
+            <label class="text-gray-700 dark:text-gray-200" >V28</label>
+            <input name="v28" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+            </div>
 
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Property Claim</label>
-            <input name="property_claim" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
-          
-          
+            
+              <div>
+                <label class="text-gray-700 dark:text-gray-200" >Amount</label>
+                <input name="amount" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                </div>
 
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Vehicle Claim</label>
-            <input name="vehicle_claim" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Auto Year</label>
-            <input name="auto_year" type="number" required  class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Policy Bind Year</label>
-            <input name="policy_bind_year" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Policy Bind Month</label>
-            <input name="policy_bind_month" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
-          <div>
-            <label class="text-gray-700 dark:text-gray-200" >Policy Bind Day</label>
-            <input name="policy_bind_day" type="number" required class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-          </div>
-
+               
           
 
           
