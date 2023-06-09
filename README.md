@@ -11,9 +11,6 @@ The Fraud Detection Web App is designed to tackle the growing challenges of frau
 - **Machine Learning Algorithms**: The web app utilizes state-of-the-art machine learning algorithms to detect fraudulent activities in real-time.
 - **Anomaly Detection Techniques**: Advanced anomaly detection techniques are applied to identify suspicious patterns and behaviors.
 - **Interactive User Interface**: The user interface allows users to input transaction data and receive immediate fraud risk assessments.
-- **Real-time Fraud Risk Evaluation**: The web app provides real-time evaluation of fraud risk for accurate decision making.
-- **Enhanced Security**: By detecting and preventing fraudulent activities, the app helps safeguard businesses and individuals from potential financial losses and security breaches.
-
 ## Technologies Used
 
 The Fraud Detection Web App is built using the following technologies:
