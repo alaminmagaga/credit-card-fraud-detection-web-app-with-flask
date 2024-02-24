@@ -1,6 +1,6 @@
 # Fraud Detection Web App
 
-The Fraud Detection Web App built with the Flask framework provides a robust solution for detecting and preventing fraud. Through the implementation of machine learning algorithms and anomaly detection techniques, the web application offers timely fraud risk assessments. The user interface is thoughtfully designed to be interactive, enabling users to input transaction data and receive real-time fraud risk evaluations. This powerful tool helps businesses and individuals combat fraudulent activities, safeguarding them from potential financial losses and security breaches.
+The Fraud Detection Web App built with the Flask framework provides a robust solution for detecting and preventing fraud. Through the implementation of machine learning algorithms, the web application offers timely fraud risk assessments. The user interface is thoughtfully designed to be interactive, enabling users to input transaction data and receive real-time fraud risk evaluations. This powerful tool helps businesses and individuals combat fraudulent activities, safeguarding them from potential financial losses and security breaches.
 
 ## Introduction
 
@@ -9,7 +9,7 @@ The Fraud Detection Web App is designed to tackle the growing challenges of frau
 ## Features
 
 - **Machine Learning Algorithms**: The web app utilizes state-of-the-art machine learning algorithms to detect fraudulent activities in real-time.
-- **Anomaly Detection Techniques**: Advanced anomaly detection techniques are applied to identify suspicious patterns and behaviors.
+
 - **Interactive User Interface**: The user interface allows users to input transaction data and receive immediate fraud risk assessments.
 ## Technologies Used
 
